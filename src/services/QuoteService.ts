@@ -17,3 +17,14 @@ export async function getRandomQuote() {
   const quote = quotes[Math.floor(Math.random() * quotes.length)];
   return quote;
 }
+
+export async function getLastQuote() {
+  const quotes = await readFileQuotes('./src/quotes.json');
+  return quotes[quotes.length - 1];
+}
+// under construction below
+export async function createQuote(author:string,quote:string) {
+ const quotes = await readFileQuotes('./src/quotes.json');
+ quotes.push({author,quote});
+ await fs.promises.writeFile('./src/quotes.json', JSON.stringify(quotes));
+}
