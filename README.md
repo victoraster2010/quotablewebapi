@@ -4,6 +4,31 @@ Name: QuotableWeb
 
 Concept: QuotableWeb is a web server that displays a new inspiring or thought-provoking quote every day. It's a simple project with a positive impact.
 
+##  Installation
+Clone this repository(using the ssh option is safer)  into where you want to save.
+
+```bash
+git clone git@github.com:victoraster2010/quotablewebapi.git
+```
+Enter the folder and use npm install to install all the project dependencies
+```bash
+ cd quotablewebapi && npm install
+```
+Common commands for this project:
+
+```bash
+# Run the project without TS compilling for development purposes only!
+ npm run start:dev
+```
+```bash
+# build the project to deploy
+ npm run build
+```
+```bash
+# Run the project after building in deploy environment
+ npm run start
+ ```
+
 Features:
 
     Quote Display: Each day, the web server presents a different quote on the homepage. Users can simply visit the site to read the latest quote.
