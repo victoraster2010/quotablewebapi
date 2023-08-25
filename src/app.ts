@@ -8,10 +8,10 @@ interface Quote {
   quote: string;
   author: string;
 }
-app.get('/', async (req: Request, res: Response) => {
-  const randomQuote = await getRandomQuote();
-  return res.status(200).json(randomQuote);
-})
+// app.get('/', async (req: Request, res: Response) => {
+//   const randomQuote = await getRandomQuote();
+//   return res.status(200).json(randomQuote);
+// })
 
 app.post('/', async (req: Request, res: Response) => {
   const { author, quote }: Quote = req.body;
