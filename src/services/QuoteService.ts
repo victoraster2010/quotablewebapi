@@ -1,6 +1,6 @@
 import fs from 'fs';
 import quotes from '../quotes.json'
-async function readFileQuotes(file: any) {
+export async function readFileQuotes(file: any) {
   try {
   const quotesData = await fs.promises.readFile(file, 'utf-8')
   const quotes = JSON.parse(quotesData);

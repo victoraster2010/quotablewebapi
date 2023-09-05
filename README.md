@@ -41,6 +41,10 @@ Features:
 
     Subscribe Option: Offer users the option to subscribe to receive the daily quote via email. This can help build a small community around your project.
 
+Endpoints implemented:
+GET /last retrieves last quote submited
+GET /random retrives random quote and author
+post /    if submited a author with name lenght > 3 and quote bigger than 5 creates a quote
 Technology Stack:
 
     Frontend: HTML5, CSS3, JavaScript
