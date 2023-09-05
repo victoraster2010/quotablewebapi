@@ -1,5 +1,11 @@
 import { Router } from "express";
-import { getRandomQuoteController } from "../controllers/QuoteController";
+import {
+  createQuoteController,
+  getLastQuoteController,
+  getRandomQuoteController
+} from "../controllers/QuoteController";
 export const quoteRouter = Router();
 
-quoteRouter.post('/', getRandomQuoteController);
+quoteRouter.get('/random', getRandomQuoteController);
+quoteRouter.get('/last', getLastQuoteController)
+quoteRouter.post('/', createQuoteController)
